@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Crédits</title>
+
+<style>
+body{
+  margin:0;
+  background:black;
+  color:white;
+  overflow:hidden;
+}
+
+/* TEXTE QUI MONTE */
+.credits{
+  position:absolute;
+  bottom:-100%;
+  width:100%;
+  text-align:center;
+  font-size:24px;
+  animation:scroll 15s linear forwards;
+}
+
+@keyframes scroll{
+  from{bottom:-100%;}
+  to{bottom:100%;}
+}
+
+h1{
+  color:gold;
+}
+
+.final{
+  margin-top:50px;
+  font-size:30px;
+  color:red;
+  animation:flash 1s infinite;
+}
+
+@keyframes flash{
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="credits">
+
+<h1>🎬 CRÉDITS</h1>
+
+<p>Projet réalisé par :</p>
+<p><b>Haytam Chebki</b></p>
+
+<br>
+
+<p>Thème :</p>
+<p>Les religions polythéistes</p>
+
+<br>
+
+<p>Année :</p>
+<p>2026</p>
+
+<div class="final">
+<p>THANKS FOR WATCHING</p>
+<p>@chebki</p>
+</div>
+
+</div>
+
+</body>
+</html>

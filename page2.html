@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Exemples - Polythéisme</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  color:white;
+  background:linear-gradient(45deg,#000,#1a1a1a,#333);
+  animation:bg 8s infinite alternate;
+}
+
+@keyframes bg{
+  from{background-position:left;}
+  to{background-position:right;}
+}
+
+header{
+  text-align:center;
+  padding:20px;
+  font-size:30px;
+  color:gold;
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.card{
+  background:rgba(255,255,255,0.1);
+  margin:20px;
+  padding:20px;
+  width:250px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:scale(1.1);
+}
+
+.card img{
+  width:100%;
+  border-radius:10px;
+}
+
+.btn{
+  display:block;
+  margin:30px auto;
+  padding:10px 20px;
+  background:gold;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>⚡ Exemples de Dieux</header>
+
+<div class="container">
+
+<div class="card">
+<img src="zeus.png">
+<h3>Zeus</h3>
+<p>Roi des dieux dans la mythologie grecque, Zeus contrôle le ciel et la foudre.</p>
+</div>
+
+<div class="card">
+<img src="anubis.png">
+<h3>Anubis</h3>
+<p>Dieu égyptien des morts, il guide les âmes vers l’au-delà.</p>
+</div>
+
+<div class="card">
+<img src="thor.png">
+<h3>Thor</h3>
+<p>Dieu nordique du tonnerre, symbole de force et de protection.</p>
+</div>
+
+<div class="card">
+<img src="krishna.png">
+<h3>Krishna</h3>
+<p>Divinité hindoue représentant l’amour et la sagesse.</p>
+</div>
+
+</div>
+
+<button onclick="location.href='page3.html'" class="btn">Page suivante</button>
+
+</body>
+</html>
