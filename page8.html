@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>THANKS FOR WATCHING</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, black, #111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+}
+
+/* Texte principal */
+.text {
+    text-align: center;
+}
+
+.text h1 {
+    font-size: 60px;
+    color: gold;
+    animation: glow 2s infinite alternate;
+}
+
+.text h2 {
+    font-size: 40px;
+    color: red;
+    margin-top: 10px;
+    animation: slideLeft 2s ease forwards;
+}
+
+.text h3 {
+    font-size: 50px;
+    color: limegreen;
+    margin-top: 20px;
+    animation: pop 1.5s infinite;
+}
+
+/* Image PNG */
+.image {
+    margin-top: 40px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.image img {
+    width: 300px;
+    filter: drop-shadow(0 0 20px gold);
+}
+
+/* Animations */
+@keyframes glow {
+    from { text-shadow: 0 0 10px gold; }
+    to { text-shadow: 0 0 30px gold; }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="text">
+    <h1>THANKS 4 WATCHING</h1>
+    <h2>@YVVVSSSSEEEN7</h2>
+    <h3>SUIIIIIIIII</h3>
+</div>
+
+<!-- IMAGE PNG (remplace le src par ton image) -->
+<div class="image">
+    <img src="cr7-final.png" alt="CR7">
+</div>
+
+</body>
+</html>

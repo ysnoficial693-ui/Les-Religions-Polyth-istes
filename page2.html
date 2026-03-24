@@ -1,101 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Exemples - Polythéisme</title>
+    <meta charset="UTF-8">
+    <title>Débuts de CR7 à Manchester United</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  color:white;
-  background:linear-gradient(45deg,#000,#1a1a1a,#333);
-  animation:bg 8s infinite alternate;
-}
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@keyframes bg{
-  from{background-position:left;}
-  to{background-position:right;}
-}
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
 
-header{
-  text-align:center;
-  padding:20px;
-  font-size:30px;
-  color:gold;
-}
+        /* Vidéo en background */
+        .bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
 
-.container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-}
+        header h1 {
+            font-size: 3em;
+            margin: 50px 20px 20px;
+            animation: slideFade 2s ease forwards;
+            opacity: 0;
+        }
 
-.card{
-  background:rgba(255,255,255,0.1);
-  margin:20px;
-  padding:20px;
-  width:250px;
-  border-radius:15px;
-  text-align:center;
-  transition:0.4s;
-}
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
 
-.card:hover{
-  transform:scale(1.1);
-}
+        /* Animation du logo uniquement */
+        .logo {
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+            animation: floatLogo 3s ease-in-out infinite;
+        }
 
-.card img{
-  width:100%;
-  border-radius:10px;
-}
+        @keyframes floatLogo {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(10deg); }
+        }
 
-.btn{
-  display:block;
-  margin:30px auto;
-  padding:10px 20px;
-  background:gold;
-  border:none;
-  border-radius:20px;
-  cursor:pointer;
-}
-</style>
+        /* Photo CR7 statique */
+        .cr7 {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+        }
 
+        /* Texte animé */
+        .text {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            padding: 0 20px;
+            opacity: 0;
+            animation: slideFade 2s ease 1s forwards;
+        }
+
+        @keyframes slideFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Bouton flèche */
+        .next-page {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 15px 25px;
+            font-size: 1.5em;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            border: 2px solid #ffc72c;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            animation: slideFade 2s ease 2s forwards;
+            opacity: 0;
+        }
+
+        .next-page:hover {
+            transform: scale(1.1);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        footer {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 50px;
+            padding: 20px 0;
+        }
+    </style>
 </head>
-
 <body>
+    <!-- Vidéo en background -->
+    <video class="bg-video" autoplay muted loop>
+        <source src="background.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
 
-<header>⚡ Exemples de Dieux</header>
+    <header>
+        <h1>CR7's Debut at Manchester United</h1>
+    </header>
 
-<div class="container">
+    <div class="content">
+        <!-- Logo Manchester United animé -->
+        <img src="manchester_united.png" alt="Logo Manchester United" class="logo">
 
-<div class="card">
-<img src="zeus.png">
-<h3>Zeus</h3>
-<p>Roi des dieux dans la mythologie grecque, Zeus contrôle le ciel et la foudre.</p>
-</div>
+        <!-- Photo de Cristiano Ronaldo jeune (statique) -->
+        <img src="cr7_1.png" alt="Cristiano Ronaldo jeune à Manchester United" class="cr7">
 
-<div class="card">
-<img src="anubis.png">
-<h3>Anubis</h3>
-<p>Dieu égyptien des morts, il guide les âmes vers l’au-delà.</p>
-</div>
+        <div class="text">
+            <p>
+                Cristiano Ronaldo joined Manchester United in 2003 from Sporting Lisbon. He quickly showcased his incredible talent and determination on the pitch. His rapid dribbling, powerful shots, and ability to change the course of a match made him one of the most promising players of his generation.
+            <p>
+               Under the guidance of Sir Alex Ferguson, Ronaldo transformed into a global superstar, winning numerous trophies and setting legendary records. His Manchester debut marked the beginning of an exceptional career.
+        </div>
 
-<div class="card">
-<img src="thor.png">
-<h3>Thor</h3>
-<p>Dieu nordique du tonnerre, symbole de force et de protection.</p>
-</div>
+        <!-- Bouton flèche pour page 3 -->
+        <a href="page3.html" class="next-page">➡</a>
+    </div>
 
-<div class="card">
-<img src="krishna.png">
-<h3>Krishna</h3>
-<p>Divinité hindoue représentant l’amour et la sagesse.</p>
-</div>
-
-</div>
-
-<button onclick="location.href='page3.html'" class="btn">Page suivante</button>
-
+    <footer>
+        <p></p>
+    </footer>
 </body>
 </html>

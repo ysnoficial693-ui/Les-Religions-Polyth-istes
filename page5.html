@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CR7 à la Juventus</title>
+<style>
+/* Police et reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+body { background: linear-gradient(135deg, #0A0A0A, #1C1C1C); color: white; overflow-x: hidden; }
+
+/* Animation d'apparition des textes */
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(50px);} 100% { opacity: 1; transform: translateY(0);} }
+@keyframes slideInLeft { 0% { opacity: 0; transform: translateX(-200px);} 100% { opacity: 1; transform: translateX(0);} }
+@keyframes pulse { 0% { transform: scale(1);} 50% { transform: scale(1.05);} 100% { transform: scale(1);} }
+
+/* Conteneur principal */
+.container { text-align: center; padding: 50px 20px; animation: fadeInUp 2s ease forwards; }
+
+/* Logo Juventus */
+.logo { width: 150px; margin-bottom: 30px; animation: pulse 2s infinite; }
+
+/* Photo de CR7 */
+.cr7 { width: 300px; margin: 20px auto; display: block; border-radius: 20px; box-shadow: 0 0 30px gold; animation: fadeInUp 2s ease forwards; }
+
+/* Texte principal */
+h1 { font-size: 3em; color: #F5D100; animation: fadeInUp 2s ease forwards; }
+p { font-size: 1.3em; margin: 20px auto; max-width: 800px; line-height: 1.6; animation: slideInLeft 2s ease forwards; }
+
+/* Footer */
+footer { position: fixed; bottom: 10px; width: 100%; text-align: center; font-size: 0.9em; color: #888; }
+
+/* Boutons flèche */
+.nav-buttons {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+    z-index: 100;
+}
+
+.nav-buttons a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0,0,0,0.6);
+    border: 2px solid #F5D100;
+    border-radius: 50%;
+    color: #F5D100;
+    font-size: 2em;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons a:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Logo Juventus -->
+    <img src="downloadJ.png" alt="Logo Juventus" class="logo">
+    <!-- Titre -->
+    <h1>Cristiano Ronaldo at Juventus</h1>
+    <!-- Photo CR7 -->
+    <img src="https://wallpapercave.com/wp/wc3137275.jpg" alt="CR7 Juventus" class="cr7">
+    <!-- Texte animé -->
+    <p>
+        Cristiano Ronaldo joined Juventus in 2018 after an exceptional career at Real Madrid. During his time in Turin, he scored over 100 goals and won several Serie A titles, cementing his legendary status as one of the greatest footballers of all time. His influence on the team and his exemplary discipline inspired everyone at Juventus.
+    </p>
+</div>
+
+<!-- Boutons navigation -->
+<div class="nav-buttons">
+    <a href="page4.html">⬅</a>
+    <a href="page6.html">➡</a>
+</div>
+
+<footer>Made by Yvvvsssssen</footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>CR7 – Retour à Manchester United</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('manchester-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+/* Partie gauche (image) */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image CR7 */
+.cr7 {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px red;
+    opacity: 0;
+    animation: riseUp 2s ease forwards;
+}
+
+/* Partie droite (texte) */
+.right {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+/* Titre */
+h1 {
+    font-size: 2.8em;
+    color: gold;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Texte */
+p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    animation: slideUp 2s ease forwards;
+}
+
+/* Animations */
+@keyframes riseUp {
+    0% { transform: translateY(200px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+/* Boutons */
+.nav-buttons {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-buttons a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid gold;
+    color: gold;
+    text-decoration: none;
+    font-size: 2em;
+    text-align: center;
+    line-height: 60px;
+    background: rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.nav-buttons a:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #aaa;
+}
+</style>
+
+</head>
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <!-- GAUCHE : CR7 -->
+    <div class="left">
+        <img src="cr7-mu.png" class="cr7">
+    </div>
+
+    <!-- DROITE : TEXTE -->
+    <div class="right">
+        <img src="manchester_united.png" class="logo">
+
+        <h1>Return to Manchester United</h1>
+
+        <p>
+            In 2021, Cristiano Ronaldo made a highly anticipated return to Manchester United, the club where his career began at the highest level. This return stirred immense emotion among fans worldwide. Despite the challenges, CR7 demonstrated that he remained an exceptional player with decisive performances and impressive leadership.
+        </p>
+    </div>
+
+<!-- Boutons navigation -->
+<div class="nav-buttons">
+    <div class="btn" onclick="goPage('page5.html')">⬅</div>
+    <div class="btn" onclick="goPage('page7.html')">➡</div>
+</div>
+
+<script>
+function goPage(page) {
+    window.location.href = page;
+}
+</script>
+
+
+<footer>Made by Yvvvsssssen</footer>
+
+</body>
+</html>

@@ -1,67 +1,152 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Conclusion</title>
+    <meta charset="UTF-8">
+    <title>CR7 – Career at Real Madrid</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  color:white;
-  text-align:center;
-  background:black;
-}
+        * { margin:0; padding:0; box-sizing:border-box; }
 
-h1{
-  margin-top:50px;
-  color:gold;
-  animation:glow 2s infinite alternate;
-}
+        body, html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            color: #fff;
+            background: url('background-real.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
 
-@keyframes glow{
-  from{ text-shadow:0 0 10px gold;}
-  to{ text-shadow:0 0 30px orange;}
-}
+        header h1 {
+            font-size: 3em;
+            margin: 50px 20px 20px;
+            animation: slideFade 2s ease forwards;
+            opacity: 0;
+            text-align: center;
+            color: #ffc72c;
+        }
 
-p{
-  width:70%;
-  margin:auto;
-  margin-top:30px;
-  line-height:1.8;
-  animation:fade 2s forwards;
-}
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 20px 50px;
+        }
 
-@keyframes fade{
-  from{opacity:0;}
-  to{opacity:1;}
-}
+        /* Grand CR7 à gauche */
+        .cr7-big {
+            max-width: 700px;
+            position: relative;
+            opacity: 0;
+            animation: riseUp 3s ease forwards;
+            align-self: flex-end;
+        }
 
-.btn{
-  margin-top:40px;
-  padding:12px 25px;
-  background:gold;
-  border:none;
-  border-radius:25px;
-  cursor:pointer;
-}
-</style>
+        @keyframes riseUp {
+            0% { transform: translateY(400px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
 
+        /* Texte et logo à droite */
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-real {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .text {
+            max-width: 600px;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #000;
+            background-color: rgba(255,255,255,0.7);
+            padding: 15px;
+            border-radius: 10px;
+            opacity: 0;
+            animation: slideFade 2s ease 1s forwards;
+        }
+
+        @keyframes slideFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Boutons flèche */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .next-page {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 15px 25px;
+            font-size: 1.5em;
+            color: #fff;
+            background-color: rgba(0,0,0,0.5);
+            border: 2px solid #ffc72c;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: slideFade 2s ease 2s forwards;
+        }
+
+        .next-page:hover {
+            transform: scale(1.1);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        footer {
+            font-size: 0.8em;
+            color: #888;
+            margin-top: 50px;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
 
-<h1>🧾 Conclusion</h1>
+    <header>
+        <h1>CR7 – Career at Real Madrid</h1>
+    </header>
 
-<p>
-Le polythéisme est une forme de croyance riche et complexe qui a marqué profondément l’histoire de l’humanité. 
-À travers différentes civilisations, les dieux ont servi à expliquer les phénomènes naturels, à structurer les sociétés et à inspirer l’art.
+    <div class="content">
+        <!-- Grand CR7 à gauche -->
+        <img src="cr7-real.png" alt="Cristiano Ronaldo au Real Madrid" class="cr7-big">
 
-Même aujourd’hui, ces mythologies continuent d’influencer la culture moderne, le cinéma, les jeux vidéo et la littérature. 
-Elles témoignent de la créativité humaine et de la recherche de sens dans l’univers.
-</p>
+        <div class="right-side">
+            <!-- Logo Real Madrid -->
+            <img src="logo-real.png" alt="Logo Real Madrid" class="logo-real">
 
-<button onclick="location.href='page4.html'" class="btn">Voir les crédits</button>
+            <!-- Texte -->
+            <div class="text">
+                <p>
+                After his years at Manchester United, Cristiano Ronaldo joined Real Madrid in 2009, where he became a true legend. He has won numerous trophies, including several Champions Leagues, and is the club's all-time leading scorer.
+                </p>
+                <p>
+                    CR7 has marked the history of football with his relentless work ethic, discipline, and determination. His exploits continue to inspire millions of fans around the world.
+                </p>
+            </div>
 
+            <!-- Boutons navigation -->
+            <div class="buttons">
+                <a href="page2.html" class="next-page">⬅</a>
+                <a href="page4.html" class="next-page">➡</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p></p>
+    </footer>
 </body>
 </html>

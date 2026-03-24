@@ -2,75 +2,175 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Crédits</title>
-
+<title>CR7 – Ses Trophées</title>
 <style>
-body{
-  margin:0;
-  background:black;
-  color:white;
-  overflow:hidden;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    background-color: #000; /* fond noir */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
 }
 
-/* TEXTE QUI MONTE */
-.credits{
-  position:absolute;
-  bottom:-100%;
-  width:100%;
-  text-align:center;
-  font-size:24px;
-  animation:scroll 15s linear forwards;
+/* Texte géant derrière CR7 */
+.bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8em;
+    color: #ffc72c;
+    font-weight: 700;
+    opacity: 0.2;
+    pointer-events: none;
+    white-space: nowrap;
 }
 
-@keyframes scroll{
-  from{bottom:-100%;}
-  to{bottom:100%;}
+/* Container pour CR7 + trophées */
+.center-container {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1{
-  color:gold;
+/* CR7 au centre */
+.cr7-center {
+    position: relative;
+    max-width: 250px;
+    z-index: 10;
+    opacity: 0;
+    animation: riseUp 2s ease forwards;
+    margin-top: 50px; /* espace pour les trophées au-dessus */
 }
 
-.final{
-  margin-top:50px;
-  font-size:30px;
-  color:red;
-  animation:flash 1s infinite;
+@keyframes riseUp {
+    0% { transform: translateY(200px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
 }
 
-@keyframes flash{
-  0%{opacity:1;}
-  50%{opacity:0;}
-  100%{opacity:1;}
+/* Conteneur des trophées au-dessus */
+.trophies-top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: -30px; /* légèrement superposé à CR7 */
+    z-index: 20;
+}
+
+/* Style trophée avec nom */
+.trophy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffc72c;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.trophy img {
+    width: 50px; /* taille du trophée */
+    margin-bottom: 5px;
+    transition: transform 0.3s;
+}
+
+.trophy img:hover {
+    transform: scale(1.2);
+}
+
+/* Texte descriptif en bas */
+.text-bottom {
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffc72c;
+    font-weight: 700;
+}
+
+/* Boutons navigation */
+.buttons {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+}
+
+.next-page {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid #ffc72c;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.next-page:hover {
+    transform: scale(1.1);
+    background-color: rgba(255,255,255,0.1);
 }
 </style>
-
 </head>
-
 <body>
 
-<div class="credits">
+<!-- Texte géant derrière CR7 -->
+<div class="bg-text">CRISTIANO</div>
 
-<h1>🎬 CRÉDITS</h1>
+<div class="center-container">
 
-<p>Projet réalisé par :</p>
-<p><b>Haytam Chebki</b></p>
+    <!-- Trophées au-dessus de CR7 -->
+    <div class="trophies-top">
+        <div class="trophy">
+            <img src="ballon_or.png" alt="Ballon d'Or">
+            <span>Ballon d'Or</span>
+        </div>
+        <div class="trophy">
+            <img src="champions_league.png" alt="Ligue des Champions">
+            <span>Champions League</span>
+        </div>
+        <div class="trophy">
+            <img src="euro.png" alt="Euro">
+            <span>Euro 2016</span>
+        </div>
+        <div class="trophy">
+            <img src="club_title.png" alt="Championnat">
+            <span>Golden Boot</span>
+        </div>
+        <div class="trophy">
+            <img src="world_records.png" alt="Records">
+            <span>Records</span>
+        </div>
+    </div>
 
-<br>
-
-<p>Thème :</p>
-<p>Les religions polythéistes</p>
-
-<br>
-
-<p>Année :</p>
-<p>2026</p>
-
-<div class="final">
-<p>THANKS FOR WATCHING</p>
-<p>@chebki</p>
+    <!-- CR7 au centre -->
+    <img src="cr7-center.png" alt="Cristiano Ronaldo" class="cr7-center">
 </div>
 
+<!-- Texte en bas -->
+<div class="text-bottom">
+    Cristiano Ronaldo – légende du football, multiple Ballon d'Or et recordman du Real Madrid.
+</div>
+
+<!-- Boutons navigation -->
+<div class="buttons">
+    <a href="page3.html" class="next-page">⬅</a>
+    <a href="page5.html" class="next-page">➡</a>
 </div>
 
 </body>
